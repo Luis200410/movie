@@ -1,5 +1,153 @@
-.movie-card{
+body{
+    width: 550px;
+    font-family: "Google Sans Flex", sans-serif;
+    margin: 2em auto;
+
+}
+
+.image{
+    height: 208px;
+    background-size: cover;
+    filter: opacity(100%) brightness(50%);
+    background-position: 10% 20%;
+    background-image: url('https://images.unsplash.com/photo-1628432136678-43ff9be34064?q=80&w=1263&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    color: white;
+    display: flex;
+}
+
+.header{
+    position: relative;
+    top: -10em;
+    left: 2em;
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.title{
+    font-size: 43px;
+    font-weight: bolder;
+}
+
+.btn-1{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    width: 550px;
+    height: 38px;
+    position: absolute;
+    top: 13.7em;
+}
+
+.input{
+    width: 342px;
+    height: 100%;
+    padding-left: 1em;
+    border: 1px solid lightgrey;
+    border-radius: 4px 0 0 4px;
+}
+
+.find{
+    width: 120px;
+    height: 100%;
+    border-radius: 0 4px 4px 0;
+    border: 1px solid lightgrey;
+    background-color: rgb(246, 244, 244);
+    color: black;
+    font-weight: 500;
+}
+
+#movies{
+    margin: 0 auto;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    margin: -5em auto;
+}
+
+.loading-container{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: #DFDDDD;
+}
+
+.movie{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 147px;
+    width: 462px;
+    border-bottom: 1px solid lightgrey;
+    padding: 1em ;
+}
+
+.movieImage img{
+    height: 147px;
+    width: 99px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 1em;
+    height: 100%;
+}
+
+.title-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.title-rating h3{
+    font-size: 18px;
+}
+
+.title-rating span{
+    font-size: 12px;
+}
+
+.info{
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+.add-watchlist{
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-weight: lighter;
+}
+
+.plot{
+    color: #6B7280;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    height: 60px;
 }
