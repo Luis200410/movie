@@ -1,7 +1,9 @@
 const form = document.getElementById('movie-form')
 const search = document.getElementById('movie-title')
 const moviesContainer = document.getElementById('movies')
+
 const apiKey = "eb42fd7d"
+let watchlist = []
 
 
 function firstPull(e){
@@ -17,7 +19,7 @@ function firstPull(e){
                     .then(data => {
                         console.log(data)
                         moviesContainer.innerHTML += `
-                            <div class="movie">
+                            <div class="movie" id="${data.imdbID}">
                                 <div class="movieImage">
                                     <img src="${data.Poster}" alt="Movie Poster">
                                 </div>
@@ -29,7 +31,7 @@ function firstPull(e){
                                     <div class="info">
                                         <p>${data.Runtime}</p>
                                         <p>Genre: ${data.Genre}</p>
-                                        <button class="add-watchlist" id="watchlist"><span></span>Watchlist</button>
+                                        <button class="add-watchlist" id="watchlist">Watchlist</button>
                                     </div>
                                     <div class="plot">
                                         <p>${data.Plot}</p>
@@ -37,6 +39,12 @@ function firstPull(e){
                                 </div>
                             </div>
                             `
+
+                            const watchlistBtn = document.getElementById(`watchlist`)
+                            watchlistBtn.addEventListener('click', function(){
+                                console.log('clicked')
+                            })
+                        
                     })
             })
     })
@@ -44,15 +52,5 @@ function firstPull(e){
     
 }
 
-
 form.addEventListener('submit', firstPull)
-
-
-    
-// }
-
-
-
-
-
 
