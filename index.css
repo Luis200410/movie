@@ -139,14 +139,24 @@ body{
     align-items: center;
     font-size: 12px;
     padding: 0;
+    padding-top: 1em;
     margin: 0;
 }
 
-.add-watchlist{
+
+.add-watchlist, .remove-watchlist{
     background-color: transparent;
     border: none;
     color: black;
     font-weight: lighter;
+}
+
+.remove-watchlist:hover{
+    color: red;
+}
+
+.add-watchlist:hover{
+    color: green;
 }
 
 .plot{
