@@ -1,11 +1,13 @@
 const watchContainer = document.getElementById('movies-watchlist')
 let watchList = JSON.parse(localStorage.getItem('myWatchlist'))
-console.log(watchList)
+const loading = document.getElementById('loading-remove')
+
+loading.style.display = 'flex'
 
 watchList.forEach(movie => renderWatchlist(movie))
 
-
 function renderWatchlist(movie){
+    loading.style.display = 'none'
     watchContainer.innerHTML += `
     <div class="movie" id="${movie.id}">
         <div class="movieImage">
@@ -27,7 +29,6 @@ function renderWatchlist(movie){
         </div>
     </div>
 `
-
 }
 
 watchContainer.addEventListener('click', removeMovie)
@@ -40,6 +41,9 @@ function removeMovie(e){
         localStorage.setItem('myWatchlist', JSON.stringify(watchList))
         watchContainer.innerHTML = ''
         watchList.forEach(movie => renderWatchlist(movie))
+        if(watchList.length === 0){
+            loading.style.display = 'flex'
+        }
     }
 }
 

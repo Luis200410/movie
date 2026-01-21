@@ -21,9 +21,12 @@
         <button type="submit" class="find">Search</button>
     </form>
     <div id="movie-container" class="container">
-        <div class="loading-container" style="display: none;">
-            <img src="loading.gif" alt="loading" id="loading" class="loading"> 
+        <div class="loading-container" id="loading">
+            <i class="fa-solid fa-film"></i>
             <p>Start exploring</p>
+        </div>
+        <div class="error" id="error">
+            <p>Unable to find What you're looking for. Please try another Search</p>
         </div>
         <div id="movies"></div>
     </div>
